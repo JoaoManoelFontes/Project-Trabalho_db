@@ -14,6 +14,9 @@ mydb = mysql.connector.connect(
 # Creating a cursor
 cursor = mydb.cursor()
 
+def get_cursor():
+    return cursor
+
 # Generics functions
 def get_books() -> list:
     """Retorna toda a lista de livros presente no banco de dados"""
