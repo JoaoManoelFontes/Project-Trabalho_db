@@ -34,19 +34,25 @@ def home():
 
     return render_template('index.html', books=books)
 
+
 @app.route("/cadastro", methods=["GET"])
 def cadastro():
     return render_template("cadastro.html")
 
 
-@app.route("/books", methods=["GET"])
-def get_books():
-    return "oi"
+@app.route("/delete/<int:id>", methods=["GET"])
+def delete(id):
+    cursor = get_connection()
+    cursor.execute('SELECT * FROM book WHERE id=%s' %id)
+    book = cursor.fetchone()
+    cursor.close()
+    return render_template("book.html", book=book)
 
 
-@app.route("/books/<int:id>", methods=["GET"])
+@app.route("/book/<int:id>", methods=["GET"])
 def get_book_by_id(id):
-    return "oi"
-
-
-# TODO: DELETE and CREATE routes
+    cursor = get_connection()
+    cursor.execute("SELECT * FROM book WHERE id=%s" %id)
+    book = cursor.fetchone()
+    cursor.close()
+    return render_template("book.html", book=book)
