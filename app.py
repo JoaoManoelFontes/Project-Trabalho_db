@@ -21,7 +21,7 @@ def get_connection():
 
 
 # Routes
-@app.route("/", methods=["GET", "POST"])
+@app.route("/", methods=["GET", "POST", "PUT"])
 def home():
     cursor = get_connection()
     cursor.execute('SELECT * FROM book')
@@ -31,7 +31,11 @@ def home():
     if request.method == "POST":
         #criar
         return render_template("index.html", books=books)
-
+    elif request.method == "PUT":
+        #atualiza
+        print(request.method)
+        return render_template("index.html", books=books)
+    print("getete")
     return render_template('index.html', books=books)
 
 
@@ -47,6 +51,14 @@ def delete(id):
     book = cursor.fetchone()
     cursor.close()
     return render_template("book.html", book=book)
+
+@app.route("/edit/<int:id>", methods=["GET"])
+def edit(id):
+    cursor = get_connection()
+    cursor.execute("SELECT * FROM book WHERE id=%s" %id)
+    book = cursor.fetchone()
+    cursor.close()
+    return render_template("edit.html", book=book)
 
 
 @app.route("/book/<int:id>", methods=["GET"])
