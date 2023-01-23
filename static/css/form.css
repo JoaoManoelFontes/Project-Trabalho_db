@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: cornflowerblue;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+section{
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  height: 80vh;
+}
+form{
+    font-family: Arial, Helvetica, sans-serif;
+}
+form div{
+    display: flex;
+    flex-direction: column ;
+    margin-bottom: 30px ;
+}
+form input, button{
+    outline: unset;
+    padding: 20px;
+    min-width: 300px;
+    border: 1px solid black ;
+    border-radius: 20px;
+}
+form input:focus{
+    background-color: wheat;
+}
+form button[type=submit]{
+    background-color: cornflowerblue;
+    color: white;
+    cursor: pointer;
+}
+form label{
+    margin-left: 10px;
+}
