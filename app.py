@@ -7,11 +7,14 @@ app = Flask(__name__)
 @app.route("/", methods=["GET", "POST"])
 def home():
     if request.method == "POST":
-        print(mysql_cursor.get_books())
-        return "get_books()"
+        #cria o livro
+        return render_template("index.html", books=mysql_cursor.get_books())
 
-    return render_template("index.html")
+    return render_template("index.html", books=mysql_cursor.get_books())
 
+@app.route("/cadastro", methods=["GET"])
+def cadastro():
+    return render_template("cadastro.html")
 
 @app.route("/books", methods=["GET"])
 def get_books():
