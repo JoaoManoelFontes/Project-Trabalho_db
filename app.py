@@ -26,16 +26,23 @@ def home():
     cursor = get_connection()
     cursor.execute('SELECT * FROM book')
     books = cursor.fetchall()
-    cursor.close()
 
     if request.method == "POST":
-        #criar
+        if not request.form['title']:
+            print("erro")
+        elif not request.form['author_name']:
+            print("erro")
+        elif not request.form['publishing_company_name']:
+            print("erro")
+        elif not request.form['release_year']:
+            print("erro")
+        
+        else:
+            cursor.execute('INSERT INTO book (title, synopsis, author_name, publishing_company_name, release_year, category) VALUES (%s, %s, %s, %s, %s, %s);' %(request.form['title'], request.form['synopsis'], request.form['author_name'], request.form['publishing_company_name'], request.form['release_year'], request.form['category']))
+            cursor.close()
+
         return render_template("index.html", books=books)
-    elif request.method == "PUT":
-        #atualiza
-        print(request.method)
-        return render_template("index.html", books=books)
-    print("getete")
+    
     return render_template('index.html', books=books)
 
 
@@ -52,8 +59,17 @@ def delete(id):
     cursor.close()
     return render_template("book.html", book=book)
 
-@app.route("/edit/<int:id>", methods=["GET"])
+@app.route("/edit/<int:id>", methods=["GET", "POST"])
 def edit(id):
+    cursor = get_connection()
+    cursor.execute('SELECT * FROM book')
+    books = cursor.fetchall()
+    cursor.close()
+
+    if request.method == "POST":
+        print(request.form)
+        return render_template("index.html", books=books)
+
     cursor = get_connection()
     cursor.execute("SELECT * FROM book WHERE id=%s" %id)
     book = cursor.fetchone()

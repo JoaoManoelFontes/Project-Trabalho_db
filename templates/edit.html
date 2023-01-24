@@ -10,7 +10,7 @@
 
 <body>
     <section>
-        <form action="/" method="POST">
+        <form action="/edit/{{book['id']}}" method="POST">
             <div>
                 <label for="title">Titulo</label>
                 <input type="text" name="title" id="" placeholder="{{book['title']}}"
@@ -34,7 +34,7 @@
             </div>
             <div>
                 <label for="release_year">Ano</label>
-                <input type="text" name="release_year" id="" placeholder="{{book['release_year']}}"
+                <input type="date" name="release_year" id="" placeholder="{{book['release_year']}}"
                     value="{{ request.form['release_year'] or book['release_year'] }}">
             </div>
             <div>
@@ -43,7 +43,7 @@
                     value="{{ request.form['category'] or book['category'] }}">
             </div>
             <div>
-                <button type="submit">Criar</button>
+                    <button type="submit">Criar</button>
             </div>
         </form>
     </section>
