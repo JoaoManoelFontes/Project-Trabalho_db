@@ -1,37 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <section>
         <form action="/" method="POST">
             <div>
                 <label for="title">Titulo</label>
-                <input type="text" name="title" id="" placeholder="{{book['title']}}" value="{{ request.form['title'] or book['title'] }}" />
+                <input type="text" name="title" id="" placeholder="{{book['title']}}"
+                    value="{{ request.form['title'] or book['title'] }}">
             </div>
             <div>
                 <label for="synopsis">Sinopise</label>
-                <input type="text" name="synopsis" id="" placeholder="{{book['synopsis']}}" value="{{ request.form['synopsis'] or book['synopsis'] }}">
+                <input type="text" name="synopsis" id="" placeholder="{{book['synopsis']}}"
+                    value="{{ request.form['synopsis'] or book['synopsis'] }}">
             </div>
             <div>
                 <label for="author_name">Autor</label>
-                <input type="text" name="author_name" id="">
+                <input type="text" name="author_name" id="" placeholder="{{book['author_name']}}"
+                    value="{{ request.form['author_name'] or book['author_name'] }}">
             </div>
             <div>
                 <label for="publishing_company_name">Editora</label>
-                <input type="text" name="publishing_company_name" id="">
+                <input type="text" name="publishing_company_name" id=""
+                    placeholder="{{book['publishing_company_name']}}"
+                    value="{{ request.form['publishing_company_name'] or book['publishing_company_name'] }}">
             </div>
             <div>
                 <label for="release_year">Ano</label>
-                <input type="text" name="release_year" id="">
+                <input type="text" name="release_year" id="" placeholder="{{book['release_year']}}"
+                    value="{{ request.form['release_year'] or book['release_year'] }}">
             </div>
             <div>
                 <label for="category">Categoria</label>
-                <input type="text" name="category" id="">
+                <input type="text" name="category" id="" placeholder="{{book['category']}}"
+                    value="{{ request.form['category'] or book['category'] }}">
             </div>
             <div>
                 <button type="submit">Criar</button>
@@ -39,4 +48,5 @@
         </form>
     </section>
 </body>
+
 </html>
