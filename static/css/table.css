@@ -1,0 +1,39 @@
+table,th,td{
+    border: 1px solid #000;
+}
+div{
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+table{
+    border-collapse: collapse;
+    width: 1000px;
+    table-layout: auto;
+    empty-cells: hide;
+    
+}
+th,td{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    padding: 15px;
+    border-spacing: 10px;
+    text-align: center;
+    justify-content: center;
+}
+th{
+    height: 40px;
+    vertical-align: bottom;
+}
+caption{
+    caption-side: bottom;
+}
+.link{
+    display: flex;
+    justify-content: flex-start;
+}
+a{
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+    
+}

@@ -1,40 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
 
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/table.css')}}">
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css')}}">
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
     <h1> lista de livros...</h1>
-    <table border="1">
-      <tr>
-        <td>Titulo</td>
-        <td>Sinopse</td>
-        <td>Autor</td>
-        <td>Editora</td>
-        <td>Ano de lançamento</td>
-        <td>Categoria</td>
-        <td>Ação</td>
-      </tr>
-      {% for book in books %}
-      <tr>
-        <td>{{ book["title"] }}</td>
-        <td>{{ book["synopsis"] }}</td>
-        <td>{{ book["author_name"] }}</td>
-        <td>{{ book["publishing_company_name"] }}</td>
-        <td>{{ book["release_year"] }}</td>
-        <td>{{ book["category"] }}</td>
-        <td><a href="/delete/{{book['id']}}"><button>Deletar</button></a><br/>
-          <a href="/edit/{{book['id']}}"><button>Editar</button></a>
-        </td>
-      </tr>
-      {% endfor %}
-    </table>
-  
-  
-    <a href="/cadastro">cadastrar livro</a>
-  </body>
+  </header>
+  <main>
+    <div style="overflow-x:auto;">
+      <table>
+        <tr>
+          <td>Titulo</td>
+          <td>Sinopse</td>
+          <td>Autor</td>
+          <td>Editora</td>
+          <td>Ano de lançamento</td>
+          <td>Categoria</td>
+          <td>Ação</td>
+        </tr>
+        {% for book in books %}
+        <tr>
+          <td>{{ book["title"] }}</td>
+          <td>{{ book["synopsis"] }}</td>
+          <td>{{ book["author_name"] }}</td>
+          <td>{{ book["publishing_company_name"] }}</td>
+          <td>{{ book["release_year"] }}</td>
+          <td>{{ book["category"] }}</td>
+          <td><a href="/delete/{{book['id']}}"><button>Deletar</button></a><br />
+            <a href="/edit/{{book['id']}}"><button>Editar</button></a>
+          </td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+    <div class="link">
+      <a href="/cadastro">cadastrar livro</a>
+    </div>
+  </main>
+  <footer>
+
+  </footer>
+
+</body>
+
 </html>
