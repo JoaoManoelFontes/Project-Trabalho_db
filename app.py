@@ -1,51 +1,45 @@
 # Imports
 from flask import Flask, render_template, request, redirect
 from flask_mysqldb import MySQL
-from flask_wtf import FlaskForm
-from wtforms import (StringField, TextAreaField, DateField)
-from wtforms.validators import InputRequired, Length
 import MySQLdb
+from form import CreateBookForm
 
 # Flask app
 app = Flask(__name__)
 app.config.from_pyfile("config.py")
 mysql = MySQL(app)
 
-#Form
-class BookForm(FlaskForm):
-    title = StringField("Título", validators=[InputRequired(),Length(min=0, max=255)])
-    synopsis = TextAreaField("Sinopse") 
-    author_name = StringField("Autor(a)", validators=[InputRequired(),Length(min=0, max=255)])
-    publishing_company_name = StringField("Editora", validators=[InputRequired(),Length(min=0, max=255)])
-    release_year = DateField("Ano de lançamento", validators=[InputRequired()])
-    category = StringField("Categoria", validators=[Length(min=0, max=255)])
-
 # Generics
 def get_connection():
+    """Retorna o cursor para fazer querys no banco de dados"""
     cursor = mysql.connection.cursor(cursorclass=MySQLdb.cursors.DictCursor)
     return cursor
 
 
-def get_books():
+def get_books() -> list:
+    """Retorna todos os livros cadastrados no banco"""
     cursor = get_connection()
     cursor.execute("SELECT * FROM book")
     return cursor.fetchall()
 
 
-def get_book_by_id(id):
+def get_book_by_id(id: int) -> object:
+    """retorna o livro com id referente ao passado pelo usuário"""
     cursor = get_connection()
     cursor.execute("SELECT * FROM book WHERE id=%s" % id)
     return cursor.fetchone()
 
 
-def delete_book(id):
+def delete_book(id: int) -> None:
+    """Deleta o livro com id referente ao passado pelo usuário"""
     cursor = get_connection()
     cursor.execute("DELETE FROM book WHERE id=%s" % id)
     mysql.connection.commit()
     cursor.close()
 
 
-def create_book(req):
+def create_book(req: dict) -> None:
+    """Cadastra um novo livro no banco de dados"""
     cursor = get_connection()
     cursor.execute(
         "INSERT INTO book (title, synopsis, author_name, publishing_company_name, release_year, category) VALUES ('%s', '%s', '%s', '%s', '%s', '%s');"
@@ -104,8 +98,8 @@ def home():
 
 @app.route("/cadastro", methods=["GET"])
 def cadastro():
-    form = BookForm()
-    return render_template("cadastro.html", form = form)
+    form = CreateBookForm()
+    return render_template("cadastro.html", form=form)
 
 
 @app.route("/delete/<int:id>", methods=["GET"])
