@@ -16,7 +16,7 @@
   <header>
     <div class="titulo">
       <img class="logo" src="static\img\logo.jpg" alt="">
-  </div>
+    </div>
   </header>
   <main>
     <div class="link">
@@ -41,9 +41,16 @@
           <td>{{ book["publishing_company_name"] }}</td>
           <td>{{ book["release_year"] }}</td>
           <td>{{ book["category"] }}</td>
-          <td><a href="/delete/{{book['id']}}"><button>Deletar</button></a><br />
-            <a href="/edit/{{book['id']}}"><button>Editar</button></a>
-            <a href="/book/{{book['id']}}"><button>Detalhar</button></a>
+          <td>
+            <div class="deletar">
+              <a href="/delete/{{book['id']}}"><button class="botao">Deletar</button></a>
+            </div>
+            <div class="editar">
+              <a href="/edit/{{book['id']}}"><button class="botao">Editar</button></a>
+            </div>
+            <div class="detalhar">
+              <a href="/book/{{book['id']}}"><button class="botao">Detalhar</button></a>
+            </div>
           </td>
         </tr>
         {% endfor %}
@@ -54,30 +61,30 @@
   <footer class="footer">
     <div class="container">
       <div class="contato">
-          <h2>contato</h2>
-          <p>(84)992223661</p>
-          <p>(84)999340235</p>
-          <p>(84)9</p>
-          <p>(84)9</p>
+        <h2>contato</h2>
+        <p>(84)992223661</p>
+        <p>(84)999340235</p>
+        <p>(84)9</p>
+        <p>(84)9</p>
       </div>
       <div class="e-mail">
-          <h2>E-mail</h2>
-          <p>hugo.nunes@escolar.ifrn.edu</p>
-          <p>fontes.manoel@escolar.ifrn.edu</p>
-          
+        <h2>E-mail</h2>
+        <p>hugo.nunes@escolar.ifrn.edu</p>
+        <p>fontes.manoel@escolar.ifrn.edu</p>
+
       </div>
       <div class="institucional">
-          <h2>Institucional</h2>
-          <p>Sobre nós</p>
+        <h2>Institucional</h2>
+        <p>Sobre nós</p>
       </div>
       <div class="rede-sociais">
-          <h2>Rede sociais</h2>
-          <p>hugojoseof</p>
-          <p>fontesjoaomanoel</p>
-          <p>cauaalexandre</p>
-          <p>claramora1s</p>
+        <h2>Rede sociais</h2>
+        <p>hugojoseof</p>
+        <p>fontesjoaomanoel</p>
+        <p>cauaalexandre</p>
+        <p>claramora1s</p>
       </div>
-  </div>
+    </div>
   </footer>
 
 </body>

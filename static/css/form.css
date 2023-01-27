@@ -67,3 +67,10 @@ textarea:hover {
     justify-content: flex-start;
     padding: 10px;
 }
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    padding: 10px;
+}

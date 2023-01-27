@@ -42,3 +42,10 @@ caption {
     justify-content: flex-end;
     padding: 10px;
 }
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    padding: 10px;
+}

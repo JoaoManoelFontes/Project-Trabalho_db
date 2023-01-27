@@ -37,13 +37,6 @@ footer {
     color: white;
 }
 
-a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-    padding: 10px;
-}
-
 .botao {
     padding: 10px;
     border: 3px solid #04A2AC;
@@ -55,5 +48,12 @@ a {
 
 .botao:hover {
     background-color: #04A2AC;
+
+}
+
+.deletar,
+.editar,
+.detalhar {
+    padding: 0.5px;
 
 }
