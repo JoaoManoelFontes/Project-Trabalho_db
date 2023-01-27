@@ -7,12 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="{{ url_for('static',filename='css/table.css')}}">
   <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css')}}">
+  <link rel="stylesheet" href="{{ url_for ('static', filename='css/header.css') }} ">
+  <link rel="stylesheet" href="{{ url_for ('static', filename='css/footer.css') }} ">
   <title>Document</title>
 </head>
 
 <body>
   <header>
-    <h1> lista de livros...</h1>
+    <div class="titulo">
+      <img class="logo" src="static\img\logo.jpg" alt="">
+  </div>
   </header>
   <main>
     <div style="overflow-x:auto;">
@@ -46,8 +50,33 @@
       <a href="/cadastro">cadastrar livro</a>
     </div>
   </main>
-  <footer>
-
+  <footer class="footer">
+    <div class="container">
+      <div class="atendimento">
+          <h2>contato</h2>
+          <p>(84)992223661</p>
+          <p>(84)999340235</p>
+          <p>(84)9</p>
+          <p>(84)9</p>
+      </div>
+      <div class="e-mail">
+          <h2>E-mail</h2>
+          <p>hugo.nunes@escolar.ifrn.edu</p>
+          <p>fontes.manoel@escolar.ifrn.edu</p>
+          
+      </div>
+      <div class="institucional">
+          <h2>Institucional</h2>
+          <p>Sobre nós</p>
+      </div>
+      <div class="endereço">
+          <h2>Rede sociais</h2>
+          <p>hugojoseof</p>
+          <p>fontesjoaomanoel</p>
+          <p>cauaalexandre</p>
+          <p>claramora1s</p>
+      </div>
+  </div>
   </footer>
 
 </body>
