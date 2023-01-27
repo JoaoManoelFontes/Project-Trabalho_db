@@ -1,5 +1,6 @@
 table,th,td{
     border: 1px solid #000;
+    background-color: white;
 }
 .tabela{
     display: flex;
@@ -33,7 +34,7 @@ caption{
 }
 a{
     text-decoration: none;
-    color: #000;
+    color: rgb(255, 255, 255);
     cursor: pointer;
     
 }
