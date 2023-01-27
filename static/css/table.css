@@ -30,11 +30,25 @@ caption{
 }
 .link{
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
+    padding: 10px;
 }
 a{
     text-decoration: none;
     color: rgb(255, 255, 255);
     cursor: pointer;
-    
+    padding: 10px;
+}
+
+.botao{
+    padding: 10px;
+    border: 3px solid #04A2AC;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 0.3em;
+}
+.botao:hover{
+    background-color: #04A2AC;
+
 }

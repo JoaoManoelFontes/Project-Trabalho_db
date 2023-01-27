@@ -3,7 +3,7 @@
     background: #04A2AC;
     position: relative;
 }
-.atendimento{
+.contato{
     margin-left: 45px;
 }
 .footer.footer .container{
@@ -21,6 +21,6 @@
 .footer p{
  font-size: 10px;
 }
-.footer .atendimento{
+.footer .contato{
     margin-left: 30px;
 }
