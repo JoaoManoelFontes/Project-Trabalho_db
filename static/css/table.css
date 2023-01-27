@@ -1,54 +1,44 @@
-table,th,td{
+table,
+th,
+td {
     border: 1px solid #000;
     background-color: white;
 }
-.tabela{
+
+.tabela {
     display: flex;
     justify-content: center;
     padding: 15px;
 }
-table{
+
+table {
     border-collapse: collapse;
     width: 1000px;
     table-layout: auto;
     empty-cells: hide;
-    
+
 }
-th,td{
+
+th,
+td {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     padding: 15px;
     border-spacing: 10px;
     text-align: center;
     justify-content: center;
 }
-th{
+
+th {
     height: 40px;
     vertical-align: bottom;
 }
-caption{
+
+caption {
     caption-side: bottom;
 }
-.link{
+
+.link {
     display: flex;
     justify-content: flex-end;
     padding: 10px;
-}
-a{
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-    padding: 10px;
-}
-
-.botao{
-    padding: 10px;
-    border: 3px solid #04A2AC;
-    background-color: black;
-    color: white;
-    cursor: pointer;
-    border-radius: 0.3em;
-}
-.botao:hover{
-    background-color: #04A2AC;
-
 }
