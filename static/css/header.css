@@ -1,0 +1,12 @@
+.titulo{
+    display: flex;
+    background-color:#04A2AC ;
+    justify-content: center;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+.logo{
+    height: 150px;
+    width: 300;
+
+}

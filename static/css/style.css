@@ -1,13 +1,9 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-header{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    background-color: cornflowerblue;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
+* {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: Poppins, sans-serif ;
 }
