@@ -1,128 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
+{% block conteudo %}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/form.css')}}">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static',filename='css/form.css')}}">
-    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css')}}">
-    <link rel="stylesheet" href="{{ url_for ('static', filename='css/header.css') }} ">
-    <link rel="stylesheet" href="{{ url_for ('static', filename='css/footer.css') }} ">
-    <title>Document</title>
-</head>
-
-<body>
-    <header>
-        <div class="titulo">
-            <img class="logo" src="static\img\logo.jpg" alt="">
-        </div>
-    </header>
-    <main>
-        <div class="link">
-            <a href="/"><button class="botao">voltar</button></a>
-        </div>
-        <section>
-            {{ form.csrf_token }}
-            <form action="/" method="post">
-                <div>
-                    <label for="title">{{ form.title.label }}</label>
-                    {{ form.title }}
-                    {% if form.title.errors %}
-                    <ul class="errors">
-                        {% for error in form.title.errors %}
-                        <li>{{ error }}</li>
-                        {% endfor %}
-                    </ul>
-                    {% endif %}
-                </div>
-                <div>
-                    <label for="synopsis">{{ form.synopsis.label }}</label>
-                    {{ form.synopsis }}
-                    {% if form.synopsis.errors %}
-                    <ul class="errors">
-                        {% for error in form.synopsis.errors %}
-                        <li>{{ error }}</li>
-                        {% endfor %}
-                    </ul>
-                    {% endif %}
-                </div>
-                <div>
-                    <label for="author_name">{{ form.author_name.label }}</label>
-                    {{ form.author_name }}
-                    {% if form.author_name.errors %}
-                    <ul class="errors">
-                        {% for error in form.author_name.errors %}
-                        <li>{{ error }}</li>
-                        {% endfor %}
-                    </ul>
-                    {% endif %}
-                </div>
-                <div>
-                    <label for="publishing_company_name">{{ form.publishing_company_name.label }}</label>
-                    {{ form.publishing_company_name }}
-                    {% if form.publishing_company_name.errors %}
-                    <ul class="errors">
-                        {% for error in form.publishing_company_name.errors %}
-                        <li>{{ error }}</li>
-                        {% endfor %}
-                    </ul>
-                    {% endif %}
-                </div>
-                <div>
-                    <label for="release_year">{{ form.release_year.label }}</label>
-                    {{ form.release_year }}
-                    {% if form.release_year.errors %}
-                    <ul class="errors">
-                        {% for error in form.release_year.errors %}
-                        <li>{{ error }}</li>
-                        {% endfor %}
-                    </ul>
-                    {% endif %}
-                </div>
-                <div>
-                    <label for="category">{{ form.category.label }}</label>
-                    {{ form.category }}
-                    {% if form.category.errors %}
-                    <ul class="errors">
-                        {% for error in form.category.errors %}
-                        <li>{{ error }}</li>
-                        {% endfor %}
-                    </ul>
-                    {% endif %}
-                </div>
-                <button type="submit">Criar</button>
-            </form>
-        </section>
-    </main>
-    <footer class="footer">
-        <div class="container">
-            <div class="contato">
-                <h2>contato</h2>
-                <p>(84)992223661</p>
-                <p>(84)999340235</p>
-                <p>(84)9</p>
-                <p>(84)9</p>
+<main>
+    <div class="link">
+        <a href="/"><button class="botao">voltar</button></a>
+    </div>
+    <section>
+        {{ form.csrf_token }}
+        <form action="/" method="post">
+            <div>
+                <label for="title">{{ form.title.label }}</label>
+                {{ form.title }}
+                {% if form.title.errors %}
+                <ul class="errors">
+                    {% for error in form.title.errors %}
+                    <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
             </div>
-            <div class="e-mail">
-                <h2>E-mail</h2>
-                <p>hugo.nunes@escolar.ifrn.edu</p>
-                <p>fontes.manoel@escolar.ifrn.edu</p>
-
+            <div>
+                <label for="synopsis">{{ form.synopsis.label }}</label>
+                {{ form.synopsis }}
+                {% if form.synopsis.errors %}
+                <ul class="errors">
+                    {% for error in form.synopsis.errors %}
+                    <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
             </div>
-            <div class="institucional">
-                <h2>Institucional</h2>
-                <p>Sobre nós</p>
+            <div>
+                <label for="author_name">{{ form.author_name.label }}</label>
+                {{ form.author_name }}
+                {% if form.author_name.errors %}
+                <ul class="errors">
+                    {% for error in form.author_name.errors %}
+                    <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
             </div>
-            <div class="rede-sociais">
-                <h2>Rede sociais</h2>
-                <p>hugojoseof</p>
-                <p>fontesjoaomanoel</p>
-                <p>cauaalexandre</p>
-                <p>claramora1s</p>
+            <div>
+                <label for="publishing_company_name">{{ form.publishing_company_name.label }}</label>
+                {{ form.publishing_company_name }}
+                {% if form.publishing_company_name.errors %}
+                <ul class="errors">
+                    {% for error in form.publishing_company_name.errors %}
+                    <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
             </div>
-        </div>
-    </footer>
-</body>
-
-</html>
+            <div>
+                <label for="release_year">{{ form.release_year.label }}</label>
+                {{ form.release_year }}
+                {% if form.release_year.errors %}
+                <ul class="errors">
+                    {% for error in form.release_year.errors %}
+                    <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+            <div>
+                <label for="category">{{ form.category.label }}</label>
+                {{ form.category }}
+                {% if form.category.errors %}
+                <ul class="errors">
+                    {% for error in form.category.errors %}
+                    <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+            <button type="submit">Criar</button>
+        </form>
+    </section>
+</main>
+{% endblock %}
