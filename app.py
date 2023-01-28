@@ -1,5 +1,5 @@
 # Imports
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, abort
 from flask_mysqldb import MySQL
 import MySQLdb
 from form import CreateBookForm
@@ -23,7 +23,7 @@ def get_books() -> list:
     return cursor.fetchall()
 
 
-def get_book_by_id(id: int) -> object:
+def get_book_by_id(id: int) -> object or None:
     """retorna o livro com id referente ao passado pelo usuário"""
     cursor = get_connection()
     cursor.execute("SELECT * FROM book WHERE id=%s" % id)
@@ -122,4 +122,6 @@ def edit(id):
 @app.route("/book/<int:id>", methods=["GET"])
 def get_book(id):
     book = get_book_by_id(id)
+    if book == None:
+        abort(400)
     return render_template("book.html", book=book)
