@@ -1,26 +1,25 @@
-.footer.footer{
-    height: auto;
-    background: #04A2AC;
-    position: relative;
+.footer.footer {
+  height: auto;
+  background: #4d4e4e;
 }
-.contato{
-    margin-left: 45px;
+.contato {
+  margin-left: 45px;
 }
-.footer.footer .container{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+.footer.footer .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
-.footer.footer .container > div{
-    flex-grow: 1;
-    flex-basis: 0;
-    padding: 3rem 0.9rem;
+.footer.footer .container > div {
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: 3rem 0.9rem;
 }
-.footer h2{
-    font-size: 15px;
+.footer h2 {
+  font-size: 15px;
 }
-.footer p{
- font-size: 10px;
+.footer p {
+  font-size: 10px;
 }
-.footer .contato{
-    margin-left: 30px;
+.footer .contato {
+  margin-left: 30px;
 }

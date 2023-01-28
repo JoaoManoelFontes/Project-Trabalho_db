@@ -1,59 +1,65 @@
 * {
-    margin: 0px;
-    padding: 0px;
-    border: none;
-    list-style: none;
-    box-sizing: border-box;
-    font-size: 16px;
-    font-family: Poppins, sans-serif;
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: Poppins, sans-serif;
 }
 
 html {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 body {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 header {
-
-    height: auto;
-    width: 100%;
+  height: auto;
+  width: 100%;
 }
 
 main {
-    width: 100%;
-    height: 60%;
-    background-color: #0D2935;
+  width: 100%;
+  background-color: #0d2935;
+  background-image: linear-gradient(#0f2027, #0d2935, #2c5364);
 }
 
 footer {
-    height: 20%;
-    width: 100%;
-    text-align: center;
-    color: white;
+  width: 100%;
+  text-align: center;
+  color: white;
 }
 
 .botao {
-    padding: 10px;
-    border: 3px solid #04A2AC;
-    background-color: black;
-    color: white;
-    cursor: pointer;
-    border-radius: 0.3em;
+  padding: 10px;
+  border: 2px solid #04a2ac;
+  background-color: black;
+  color: white;
+  font-size: small;
+  cursor: pointer;
+  border-radius: 0.3em;
 }
 
 .botao:hover {
-    background-color: #04A2AC;
-
+  background-color: #04a2ac;
 }
 
 .deletar,
 .editar,
 .detalhar {
-    padding: 0.5px;
+  padding: 2px;
+  margin: 2.5px;
+}
 
+main > h1 {
+  text-align: center;
+  color: #fff;
+  padding: 2%;
+  font-size: 50px;
+  font-weight: bolder;
 }

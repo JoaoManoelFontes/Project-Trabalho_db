@@ -1,76 +1,76 @@
 section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 3%;
 }
 
 form {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 form div {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
 }
 
 form input,
 button {
-    outline: unset;
-    padding: 10px;
-    border: 3px solid #04A2AC;
-    background-color: black;
-    color: white;
-    cursor: pointer;
-    border-radius: 0.3em;
-    min-width: 300px;
+  outline: unset;
+  padding: 10px;
+  border: 3px solid #04a2ac;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border-radius: 0.3em;
+  min-width: 300px;
 }
 
 form input:focus {
-    background-color: #04A2AC;
-    color: white;
+  background-color: #04a2ac;
+  color: white;
 }
 
-form button[type=submit] {
-    background-color: black;
-    color: white;
-    cursor: pointer;
+form button[type="submit"] {
+  background-color: black;
+  color: white;
+  cursor: pointer;
 }
 
 form label {
-    margin-left: 10px;
-    color: white;
+  margin-left: 10px;
+  color: white;
 }
 
 form button:hover {
-    background-color: #04A2AC;
-    color: white;
+  background-color: #04a2ac;
+  color: white;
 }
 
 textarea {
-    padding: 10px;
-    border: 3px solid #04A2AC;
-    background-color: black;
-    color: white;
-    cursor: pointer;
-    border-radius: 0.3em;
+  padding: 10px;
+  border: 3px solid #04a2ac;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border-radius: 0.3em;
 }
 
 textarea:hover {
-    background-color: #04A2AC;
-    color: white;
+  background-color: #04a2ac;
+  color: white;
 }
 
 .link {
-    display: flex;
-    justify-content: flex-start;
-    padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
 }
 
 a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-    padding: 10px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  padding: 10px;
 }
