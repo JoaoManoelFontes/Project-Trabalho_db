@@ -29,4 +29,4 @@
 
 1. Execute o arquivo create_book_table.py que está na pasta database para criar a table de livros
 
-1. Por fim, inicie o server rodando o comando **_flask --app .app.py run_**
+1. Por fim, inicie o server rodando o comando flask --app .\app\_\_init\_\_.py run
