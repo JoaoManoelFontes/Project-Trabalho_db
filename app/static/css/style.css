@@ -56,13 +56,28 @@ footer {
   margin: 2.5px;
 }
 
-main > h1 {
+main>h1 {
   text-align: center;
   color: #fff;
   padding: 2%;
   font-size: 50px;
   font-weight: bolder;
 }
-.sobre{
+
+.sobre {
   font-size: 10px;
+}
+
+.container-titulo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+}
+
+.titulo {
+  color: #fff;
+  font-size: 50px;
+  font-weight: bolder;
+  padding-top: 15px;
+  padding-left: 110px;
 }

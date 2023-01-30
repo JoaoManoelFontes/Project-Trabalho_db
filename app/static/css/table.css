@@ -8,7 +8,6 @@ td {
 .tabela {
   display: flex;
   justify-content: center;
-  padding: 15px;
 }
 
 table {
@@ -47,4 +46,12 @@ a {
   color: rgb(255, 255, 255);
   cursor: pointer;
   padding: 10px;
+}
+
+.container-table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10% 10% 0 10%;
+
 }

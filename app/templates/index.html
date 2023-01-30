@@ -2,41 +2,42 @@
 {% block conteudo %}
 <link rel="stylesheet" href="{{ url_for('static',filename='css/table.css')}}" />
 <main>
-  <h1 class="main-title">E-Library</h1>
-  <div class="tabela">
-    <table>
-      <tr>
-        <td>Titulo</td>
-        <td>Sinopse</td>
-        <td>Autor</td>
-        <td>Editora</td>
-        <td>Ano de lançamento</td>
-        <td>Categoria</td>
-        <td>Ação</td>
-      </tr>
+  <div class="container-table">
+    <div class="tabela">
+      <table>
+        <tr>
+          <td>Titulo</td>
+          <td>Sinopse</td>
+          <td>Autor</td>
+          <td>Editora</td>
+          <td>Ano de lançamento</td>
+          <td>Categoria</td>
+          <td>Ação</td>
+        </tr>
 
-      {% for book in books %}
-      <tr id="book-id-{{book['id']}}">
-        <td>{{ book["title"] }}</td>
-        <td>{{ book["synopsis"] }}</td>
-        <td>{{ book["author_name"] }}</td>
-        <td>{{ book["publishing_company_name"] }}</td>
-        <td>{{ book["release_year"] }}</td>
-        <td>{{ book["category"] }}</td>
-        <td>
-          <div class="deletar">
-            <a href="/delete/{{book['id']}}"><button class="botao">Deletar</button></a>
-          </div>
-          <div class="editar">
-            <a href="/edit/{{book['id']}}"><button class="botao">Editar</button></a>
-          </div>
-          <div class="detalhar">
-            <a href="/book/{{book['id']}}"><button class="botao">Detalhar</button></a>
-          </div>
-        </td>
-      </tr>
-      {% endfor %}
-    </table>
+        {% for book in books %}
+        <tr id="book-id-{{book['id']}}">
+          <td>{{ book["title"] }}</td>
+          <td>{{ book["synopsis"] }}</td>
+          <td>{{ book["author_name"] }}</td>
+          <td>{{ book["publishing_company_name"] }}</td>
+          <td>{{ book["release_year"] }}</td>
+          <td>{{ book["category"] }}</td>
+          <td>
+            <div class="deletar">
+              <a href="/delete/{{book['id']}}"><button class="botao">Deletar</button></a>
+            </div>
+            <div class="editar">
+              <a href="/edit/{{book['id']}}"><button class="botao">Editar</button></a>
+            </div>
+            <div class="detalhar">
+              <a href="/book/{{book['id']}}"><button class="botao">Detalhar</button></a>
+            </div>
+          </td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
   </div>
   <div class="link">
     <a href="/cadastro"><button class="botao">cadastrar livro</button></a>
