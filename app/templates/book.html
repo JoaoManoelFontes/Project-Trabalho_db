@@ -1,31 +1,38 @@
 {% extends 'base.html' %}
 {% block conteudo %}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/book.css')}}" />
 <main>
   <div class="link">
     <a href="/"><button class="botao">voltar</button></a>
   </div>
-  <div class="book">
-    <div class="titulo-do-livro">
-      <h1>{{book['title']}}</h1>
-    </div>
-    <div class="autor">
-      <p>Autor: {{book['author_name']}}</p>
-    </div>
-    <div class="categoria">
-      <p>Categoria: {{book['category']}}</p>
-    </div>
-    <div class="sinopse">
-      <p>Sinopse:</p>
-      <p>{{book['synopsis']}}</p>
-    </div>
-    <div class="container">
-      <div class="editora">
-        <p>Editora: {{book['publishing_company_name']}}</p>
+
+  <div class="container-book">
+    <div class="book">
+      <div class="titulo-do-livro">
+        <h1>{{book['title']}}</h1>
       </div>
-      <div class="data">
-        <p>Data: {{book['release_year']}}</p>
+      <div class="autor">
+        <p>Autor: {{book['author_name']}}</p>
+      </div>
+      <div class="categoria">
+        <p>Categoria: {{book['category']}}</p>
+      </div>
+      <div class="sinopse">
+        <h2>Sinopse:</h2>
+        <p>{{book['synopsis']}}</p>
+      </div>
+      <div class="container">
+        <div class="editora">
+          <p>Editora: {{book['publishing_company_name']}}</p>
+        </div>
+        <div class="data">
+          <p>Data: {{book['release_year']}}</p>
+        </div>
       </div>
     </div>
   </div>
+
+
+  <hr>
 </main>
 {% endblock %}

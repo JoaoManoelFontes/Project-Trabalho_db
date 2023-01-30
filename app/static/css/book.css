@@ -1,0 +1,59 @@
+.titulo-do-livro,
+h1 {
+    font-size: 50px;
+    display: flex;
+}
+
+.book {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 3px solid #04A2AC;
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-top: 10px;
+}
+
+.container-book {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 9% 25%;
+    
+}
+
+.autor>p,
+.categoria>p,
+.sinopse>p,
+.editora>p,
+.data>p {
+    font-size: 13px;
+    padding: 10px 20px;
+    text-align: justify;
+}
+
+.sinopse>h2 {
+    font-size: 20px;
+    padding: 10px 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.link {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+  }
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    padding: 10px;
+}
+
+h1 {
+    border-left: 4px solid #04A2AC;
+    padding-left: 10px;
+}
+

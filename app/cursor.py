@@ -1,3 +1,4 @@
+from datetime import datetime
 from app import app
 from flask_mysqldb import MySQL
 import MySQLdb
@@ -36,6 +37,10 @@ def delete_book(id: int) -> None:
 def create_book(req: dict) -> None:
     """Cadastra um novo livro no banco de dados"""
     cursor = get_connection()
+
+    #release_year = datetime.strptime(req['release_year'], '%Y-%m-%d').strftime('%d/%b/%Y')
+ 
+
     cursor.execute(
         "INSERT INTO book (title, synopsis, author_name, publishing_company_name, release_year, category) VALUES ('%s', '%s', '%s', '%s', '%s', '%s');"
         % (
@@ -43,6 +48,7 @@ def create_book(req: dict) -> None:
             req["synopsis"],
             req["author_name"],
             req["publishing_company_name"],
+            #release_year,
             req["release_year"],
             req["category"],
         )
