@@ -10,13 +10,13 @@ def home():
 
     if request.method == "POST":
         if not request.form["title"]:
-            print("erro")
+            abort(400)
         elif not request.form["author_name"]:
-            print("erro")
+            abort(400)
         elif not request.form["publishing_company_name"]:
-            print("erro")
+            abort(400)
         elif not request.form["release_year"]:
-            print("erro")
+            abort(400)
         else:
             cursor.create_book(request.form)
 
@@ -45,7 +45,8 @@ def edit(id):
         return redirect("/")
 
     book = cursor.get_book_by_id(id)
-    return render_template("edit.html", book=book)
+    form = CreateBookForm()
+    return render_template("edit.html", book=book, form=form)
 
 
 @app.route("/book/<int:id>", methods=["GET"])
