@@ -55,3 +55,7 @@ def get_book(id):
     if book == None:
         abort(400)
     return render_template("book.html", book=book)
+
+@app.route("/sobre")
+def sobre ():
+    return render_template("sobre-nos.html")

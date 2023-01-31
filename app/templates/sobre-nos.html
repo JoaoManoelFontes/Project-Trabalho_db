@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/book.css')}}" />
+<main>
+  <div class="link">
+    <a href="/"><button class="botao">voltar</button></a>
+  </div>
+
+  <div class="container-book">
+    <div class="book">
+      <div class="titulo-do-livro">
+        <h1>Sobre nós</h1>
+      </div>
+      <div class="autor">
+        <p>Autores: Cauã Alexandre, Hugo José, João Manoel e Maria Clara Morais</p>
+      </div>
+      <div class="categoria">
+        <p>Cidade: São Miguel e Pau dos Ferros</p>
+      </div>
+      <div class="sinopse">
+        <h2>Produção:</h2>
+        <p>Cauã Alexandre: protótipo no figma e css; </p>
+        <p>Hugo José: criação de templetes e organização de arquivos;</p>
+        <p>João Manoel: criação das rotas e organização de arquivos;</p>
+        <p>Maria Clara Morais: criou o banco de dados e ajudou nas rotas.</p>
+      </div>
+      <div class="container">
+        <div class="editora">
+          <p>Editora: </p>
+        </div>
+        <div class="data">
+          <p>Data: </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <hr>
+</main>
+{% endblock %}
