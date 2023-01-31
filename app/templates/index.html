@@ -21,7 +21,7 @@
           <td>{{ book["synopsis"] }}</td>
           <td>{{ book["author_name"] }}</td>
           <td>{{ book["publishing_company_name"] }}</td>
-          <td>{{ book["release_year"] }}</td>
+          <td>{{ book["release_year"].strftime("%d/%m/%Y") }}</td>
           <td>{{ book["category"] }}</td>
           <td>
             <div class="deletar">
